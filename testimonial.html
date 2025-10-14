@@ -1,304 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Investa - Investment Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>BoomTech Testimonials - Client Success Stories Tanzania</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="BoomTech testimonials, software development reviews Tanzania, mobile app success stories, ERP implementation feedback, client testimonials Dar es Salaam" name="keywords">
+    <meta content="Read what Tanzanian businesses say about BoomTech's software development services, mobile apps, ERP implementations, and digital transformation success stories." name="description">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .testimonial-item {
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #0d6efd;
+        }
+        .client-badge {
+            background: linear-gradient(135deg, #0d6efd, #28a745);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+        }
+        .rating-stars {
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+        .testimonial-quote {
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .success-metric {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .success-metric h6 {
+            color: #0d6efd;
+            margin-bottom: 5px;
+        }
+        .industry-tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+<body>
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-
-    <body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
-        <!-- Spinner End -->
+    </div>
 
-
-        <!-- Topbar Start -->
-        <div class="container-fluid topbar px-0 d-none d-lg-block">
-            <div class="container px-0">
-                <div class="row gx-0 align-items-center" style="height: 45px;">
-                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-                        <div class="d-flex flex-wrap">
-                            <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
-                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
-                            <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
-                        </div>
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar px-0 d-none d-lg-block">
+        <div class="container px-0">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="contact.html#map-section" class="text-muted me-4">
+                            <i class="fas fa-map-marker-alt text-primary me-2"></i>Dar es Salaam HQ
+                        </a>
+                        <a href="tel:+255743157929" class="text-muted me-4">
+                            <i class="fas fa-phone-alt text-primary me-2"></i>+255 743 157 929
+                        </a>
+                        <a href="mailto:boomtech@gmail.com" class="text-muted">
+                            <i class="fas fa-envelope text-primary me-2"></i>boomtech@gmail.com
+                        </a>
                     </div>
-                    <div class="col-lg-4 text-center text-lg-end">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
-                        </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                        <a href="https://instagram.com/brandingbay" target="_blank" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Topbar End -->
+    </div>
 
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid sticky-top px-0">
-            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
-            </div>
-            <div class="container px-0">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
-                    <a href="index.html" class="navbar-brand p-0">
-                        <h1 class="text-primary m-0"><i class="fas fa-donate me-3"></i>Investa</h1>
-                        <!-- <img src="img/logo.png" alt="Logo"> -->
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav ms-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Services</a>
-                            <a href="project.html" class="nav-item nav-link">Projects</a>
-                            <div class="nav-item dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu m-0">
-                                    <a href="blog.html" class="dropdown-item">Our Blog</a>
-                                    <a href="team.html" class="dropdown-item">Our Team</a>
-                                    <a href="testimonial.html" class="dropdown-item active">Testimonial</a>
-                                    <a href="faqs.html" class="dropdown-item">FAQs</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
-                                </div>
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+        <div class="container px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+               <a href="index.html" class="navbar-brand p-0">
+                <img src="img/picha1.png" alt="BoomTech Logo" class="picha1">
+            </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <div class="nav-item dropdown active">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="blog.html" class="dropdown-item">Our Blog</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item active">Testimonials</a>
+                                <a href="faqs.html" class="dropdown-item">FAQs</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
-                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
-                            <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Start Investa</a>
-                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                </nav>
-            </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                        <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                        <a href="contact.html" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2">Get Quote</a>
+                    </div>
+                </div>
+            </nav>
         </div>
-        <!-- Navbar & Hero End -->
+    </div>
 
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
+    <!-- Modal Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h4 class="modal-title mb-0" id="exampleModalLabel">Search Testimonials</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control p-3" placeholder="Search by industry, service, or company..." aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Modal Search End -->
+    </div>
 
-        <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="bg-breadcrumb-single"></div>
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Testimonial</h4>
-                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active text-primary">Testimonial</li>
-                </ol>    
-            </div>
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="bg-breadcrumb-single"></div>
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Client Success</h4>
+            <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item active text-primary">Testimonials</li>
+            </ol>    
         </div>
-        <!-- Header End -->
+    </div>
 
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial bg-light py-5">
-            <div class="container py-5">
-                <div class="row g-4 align-items-center">
-                    <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="h-100 rounded">
-                            <h4 class="text-primary">Our Feedbacks</h4>
-                            <h1 class="display-4 mb-4">Clients are Talking</h1>
-                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum atque soluta unde itaque. Consequatur quam odit blanditiis harum veritatis porro.</p>
-                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read All Reviews <i class="fas fa-arrow-right ms-2"></i></a>
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="h-100 rounded p-4 bg-white shadow">
+                        <h4 class="text-primary"><i class="fas fa-star me-2"></i>4.9/5 Rating</h4>
+                        <h1 class="display-4 mb-4">Trusted by Tanzanian Businesses</h1>
+                        <p class="mb-4">BoomTech has delivered 100+ successful software projects across Tanzania, transforming businesses with mobile apps, ERP systems, and digital solutions.</p>
+                        <div class="row text-center">
+                            <div class="col-6">
+                                <h3 class="text-primary">98%</h3>
+                                <p class="text-muted small">Client Satisfaction</p>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="text-primary">50+</h3>
+                                <p class="text-muted small">Happy Clients</p>
+                            </div>
                         </div>
+                        <a href="contact.html" class="btn btn-primary rounded-pill text-white py-3 px-5 mt-3">
+                            Start Your Project <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
                     </div>
-                    <div class="col-xl-8">
-                        <div class="testimonial-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="d-flex">
-                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                    <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
-                                    </p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <div class="my-auto text-end">
-                                        <h5>Person Name</h5>
-                                        <p class="mb-0">Profession</p>
-                                    </div>
-                                    <div class="bg-white rounded-circle ms-3">
-                                        <img src="img/testimonial-1.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
-                                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="testimonial-carousel owl-carousel wow fadeInUp" data-wow-delay="0.2s">
+                        
+                        <!-- Banking Client -->
+                        <div class="testimonial-item bg-white rounded p-4 position-relative">
+                            <div class="client-badge">Banking Sector</div>
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-2x text-primary me-3"></i></div>
+                                <div class="testimonial-quote">
+                                    "BoomTech developed our mobile banking app that now serves 500K+ customers across Tanzania. Their TRA compliance expertise and offline functionality were game-changers for rural banking."
                                 </div>
                             </div>
-                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="d-flex">
-                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                    <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
-                                    </p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <div class="my-auto text-end">
-                                        <h5>Person Name</h5>
-                                        <p class="mb-0">Profession</p>
-                                    </div>
-                                    <div class="bg-white rounded-circle ms-3">
-                                        <img src="img/testimonial-2.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
-                                    </div>
-                                </div>
+                            <div class="success-metric">
+                                <h6><i class="fas fa-chart-line text-success me-2"></i>300% User Growth</h6>
+                                <p class="small mb-0">Within 6 months of launch</p>
                             </div>
-                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
-                                <div class="d-flex">
-                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                    <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
-                                    </p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div>
+                                    <h6 class="mb-1">Fatma Mwinyi</h6>
+                                    <p class="text-muted small mb-0">Head of Digital Banking, CRDB Bank</p>
+                                    <span class="industry-tag">FinTech</span>
+                                    <span class="industry-tag">Mobile Banking</span>
                                 </div>
-                                <div class="d-flex justify-content-end">
-                                    <div class="my-auto text-end">
-                                        <h5>Person Name</h5>
-                                        <p class="mb-0">Profession</p>
-                                    </div>
-                                    <div class="bg-white rounded-circle ms-3">
-                                        <img src="img/testimonial-3.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
-                                    </div>
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-3">
+                                    <img src="img/client-crdb.jpg" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover;" alt="CRDB Bank">
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Logistics Client -->
+                        <div class="testimonial-item bg-white rounded p-4 position-relative">
+                            <div class="client-badge">Logistics</div>
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-2x text-primary me-3"></i></div>
+                                <div class="testimonial-quote">
+                                    "Our ERP system implementation reduced delivery times by 40% and improved inventory accuracy to 99%. BoomTech's local team understood our Tanzania-specific logistics challenges perfectly."
+                                </div>
+                            </div>
+                            <div class="success-metric">
+                                <h6><i class="fas fa-truck text-success me-2"></i>40% Faster Deliveries</h6>
+                                <p class="small mb-0">Real-time tracking integration</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div>
+                                    <h6 class="mb-1">Joseph Ndugu</h6>
+                                    <p class="text-muted small mb-0">Operations Director, Azam Logistics</p>
+                                    <span class="industry-tag">Supply Chain</span>
+                                    <span class="industry-tag">ERP</span>
+                                </div>
+                                <img src="img/client-logistics.jpg" class="rounded-circle p-2 border border-primary" style="width: 70px; height: 70px;" alt="Azam Logistics">
+                            </div>
+                        </div>
+
+                        <!-- Retail Client -->
+                        <div class="testimonial-item bg-white rounded p-4 position-relative">
+                            <div class="client-badge">Retail</div>
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-2x text-primary me-3"></i></div>
+                                <div class="testimonial-quote">
+                                    "The e-commerce platform BoomTech built increased our online sales by 250% in just 3 months. Their Swahili localization and mobile-first approach perfectly matched our customer base."
+                                </div>
+                            </div>
+                            <div class="success-metric">
+                                <h6><i class="fas fa-shopping-cart text-success me-2"></i>250% Sales Growth</h6>
+                                <p class="small mb-0">E-commerce platform launch</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div>
+                                    <h6 class="mb-1">Amina Hassan</h6>
+                                    <p class="text-muted small mb-0">CEO, Uchumi Digital</p>
+                                    <span class="industry-tag">E-commerce</span>
+                                    <span class="industry-tag">Retail</span>
+                                </div>
+                                <img src="img/client-retail.jpg" class="rounded-circle p-2 border border-primary" style="width: 70px; height: 70px;" alt="Uchumi Digital">
+                            </div>
+                        </div>
+
+                        <!-- Telecom Client -->
+                        <div class="testimonial-item bg-white rounded p-4 position-relative">
+                            <div class="client-badge">Telecom</div>
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-2x text-primary me-3"></i></div>
+                                <div class="testimonial-quote">
+                                    "BoomTech's custom billing system handles 2M+ transactions daily with 99.9% uptime. Their TCRA compliance expertise saved us months of regulatory headaches."
+                                </div>
+                            </div>
+                            <div class="success-metric">
+                                <h6><i class="fas fa-network-wired text-success me-2"></i>99.9% Uptime</h6>
+                                <p class="small mb-0">Mission-critical billing system</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div>
+                                    <h6 class="mb-1">Rashid Kikoti</h6>
+                                    <p class="text-muted small mb-0">CTO, Vodacom Tanzania</p>
+                                    <span class="industry-tag">Telecom</span>
+                                    <span class="industry-tag">Billing Systems</span>
+                                </div>
+                                <img src="img/client-telecom.jpg" class="rounded-circle p-2 border border-primary" style="width: 70px; height: 70px;" alt="Vodacom">
+                            </div>
+                        </div>
+
+                        <!-- Manufacturing Client -->
+                        <div class="testimonial-item bg-white rounded p-4 position-relative">
+                            <div class="client-badge">Manufacturing</div>
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-2x text-primary me-3"></i></div>
+                                <div class="testimonial-quote">
+                                    "Our production efficiency increased by 35% after implementing BoomTech's MES system. The real-time monitoring dashboard gives us complete factory visibility."
+                                </div>
+                            </div>
+                            <div class="success-metric">
+                                <h6><i class="fas fa-industry text-success me-2"></i>35% Efficiency Gain</h6>
+                                <p class="small mb-0">Manufacturing Execution System</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div>
+                                    <h6 class="mb-1">Maryam Zuberi</h6>
+                                    <p class="text-muted small mb-0">Operations Manager, TBL</p>
+                                    <span class="industry-tag">Manufacturing</span>
+                                    <span class="industry-tag">MES</span>
+                                </div>
+                                <img src="img/client-manufacturing.jpg" class="rounded-circle p-2 border border-primary" style="width: 70px; height: 70px;" alt="TBL">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Testimonials Stats -->
+            <div class="row mt-5 text-center">
+                <div class="col-md-4">
+                    <div class="bg-primary text-white p-4 rounded">
+                        <h2>50+</h2>
+                        <p class="mb-0">Satisfied Clients</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-success text-white p-4 rounded">
+                        <h2>100+</h2>
+                        <p class="mb-0">Projects Delivered</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-info text-white p-4 rounded">
+                        <h2>4.9/5</h2>
+                        <p class="mb-0">Average Rating</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Testimonial End -->
+    </div>
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <div class="footer-item">
-                                <h4 class="text-white mb-4">Newsletter</h4>
-                                <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
-                                <div class="position-relative mx-auto rounded-pill">
-                                    <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                    <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                                </div>
-                            </div>
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">BoomTech</h4>
+                        <p class="text-light mb-4">Trusted software partner for Tanzania's leading businesses. Delivering digital transformation through innovative technology solutions.</p>
+                        <div class="d-flex gap-2">
+                            <a class="btn btn-light btn-md-square" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-light btn-md-square" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-light btn-md-square" href="https://instagram.com/brandingbay"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-light btn-md-square" href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Explore</h4>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Home</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Latest Projects</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> testimonial</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Our Team</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Our Services</h4>
+                        <a href="service.html"><i class="fas fa-angle-right me-2"></i>Mobile Apps</a>
+                        <a href="service.html"><i class="fas fa-angle-right me-2"></i>Web Development</a>
+                        <a href="service.html"><i class="fas fa-angle-right me-2"></i>ERP Systems</a>
+                        <a href="service.html"><i class="fas fa-angle-right me-2"></i>Digital Transformation</a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
-                            <div class="d-flex align-items-center">
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Contact</h4>
+                        <a href="tel:+255743157929"><i class="fas fa-phone me-2"></i>+255 743 157 929</a>
+                        <a href="mailto:boomtech@gmail.com"><i class="fas fa-envelope me-2"></i>info@boomtech.co.tz</a>
+                        <a href="contact.html"><i class="fas fa-map-marker-alt me-2"></i>Dar es Salaam</a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item-post d-flex flex-column">
-                            <h4 class="text-white mb-4">Popular Post</h4>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Investment</p>
-                                <a href="#" class="text-body">Revisiting Your Investment & Distribution Goals</a>
-                            </div>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Business</p>
-                                <a href="#" class="text-body">Dimensional Fund Advisors Interview with Director</a>
-                            </div>
-                            <div class="footer-btn text-start">
-                                <a href="#" class="btn btn-light rounded-pill px-4">View All Post <i class="fa fa-arrow-right ms-1"></i></a>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Success Stories</h4>
+                        <a href="project.html"><i class="fas fa-angle-right me-2"></i>Case Studies</a>
+                        <a href="testimonial.html"><i class="fas fa-angle-right me-2"></i>Testimonials</a>
+                        <a href="blog.html"><i class="fas fa-angle-right me-2"></i>Tech Insights</a>
+                        <a href="contact.html"><i class="fas fa-angle-right me-2"></i>Get Started</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+    </div>
 
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-body">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-primary" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="text-body">
+                        <i class="fas fa-copyright me-2"></i>© 2025 BoomTech - Tanzania's Digital Success Partner
+                    </span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span class="text-primary">Trusted by Industry Leaders</span>
                 </div>
             </div>
         </div>
-        <!-- Copyright End -->
+    </div>
 
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
-
-        
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -308,10 +458,37 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    </body>
+
+    <script>
+        // Initialize Owl Carousel for testimonials
+        $(document).ready(function(){
+            $('.testimonial-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    992: { items: 1 }
+                },
+                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>']
+            });
+        });
+
+        // Add hover effects
+        $('.testimonial-item').hover(
+            function() {
+                $(this).addClass('shadow-lg');
+            },
+            function() {
+                $(this).removeClass('shadow-lg');
+            }
+        );
+    </script>
+</body>
 
 </html>
