@@ -1,9 +1,9 @@
 
 /*** Spinner Start ***/
 .picha1{
-    height: 65px; /* Adjust this height to fit your navbar */
+    height: 50px; /* Adjust this height to fit your navbar */
     width: auto;  /* Keeps aspect ratio */
-    max-height: 70px; /* Prevents it from being too tall */
+    max-height: 60px; /* Prevents it from being too tall */
 }
 
 /* For responsive design - adjust height on smaller screens */
