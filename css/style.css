@@ -9,7 +9,7 @@
 /* For responsive design - adjust height on smaller screens */
 @media (max-width: 768px) {
     .picha1 {
-        height: 40px;
+        height: 20px;
     }
 }
 
