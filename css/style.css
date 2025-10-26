@@ -1,4 +1,3 @@
-
 /*** Spinner Start ***/
 .picha1{
     height: 50px; /* Adjust this height to fit your navbar */
@@ -12,9 +11,6 @@
         height: 35px;
     }
 }
-
-
-
 
 /*** Spinner ***/
 #spinner {
@@ -129,15 +125,63 @@
     background: var(--bs-white) !important;
     color: var(--bs-dark) !important;
 }
+/*** Button End ***/
+
 /*** Topbar Start ***/
+/* FULL-WIDTH TOPBAR – NO CENTER GAP */
 .topbar {
-    padding: 2px 10px 2px 20px;
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 20px;
     background: var(--bs-dark) !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    color: var(--bs-white);
+    font-size: 0.9rem;
 }
 
+.topbar .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.topbar .contact-info i {
+    color: var(--bs-primary);
+    margin-right: 6px;
+}
+
+.topbar .social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.topbar .social-links a {
+    color: var(--bs-white);
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.topbar .social-links a:hover {
+    color: var(--bs-primary);
+}
+
+/* Responsive: Stack vertically on small screens */
 @media (max-width: 768px) {
     .topbar {
-        display: none;    
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 15px;
+        gap: 8px;
+    }
+    .topbar .contact-info,
+    .topbar .social-links {
+        justify-content: center;
     }
 }
 /*** Topbar End ***/
@@ -148,9 +192,21 @@
     transition: 0.5s !important;
 }
 
+.navbar {
+    background: var(--bs-white) !important;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .navbar-brand {
+    margin: 0;
+}
+
 .navbar .navbar-nav .nav-item.nav-link,
 .navbar .navbar-nav .nav-link {
     color: var(--bs-dark) !important;
+    font-weight: 500;
+    padding: 8px 15px !important;
 }
 
 .navbar .navbar-nav .nav-item {
@@ -227,7 +283,6 @@
     .navbar .navbar-nav .nav-item.nav-link {
         margin: 15px 0 !important;
     }
-
 }
 
 .dropdown .dropdown-menu a:hover {
@@ -248,6 +303,7 @@
     padding: 8px 15px;
     color: var(--bs-dark);
     background: var(--bs-primary);
+    border: none;
 }
 
 #searchModal .modal-content {
@@ -279,13 +335,8 @@
     transition: 0.5s;
 }
 
-.owl-prev {
-    left: 30px;
-}
-
-.owl-next {
-    right: 30px;
-}
+.owl-prev { left: 30px; }
+.owl-next { right: 30px; }
 
 .owl-prev:hover,
 .owl-next:hover {
@@ -398,15 +449,11 @@
         height: 700px;
         object-fit: cover;
     }
-
     .owl-prev,
     .owl-next {
         top: 40px !important;
     }
-
-    .owl-prev {
-        left: 65%;
-    }
+    .owl-prev { left: 65%; }
 }
 /*** Header Carousel End ***/
 
@@ -439,7 +486,6 @@
     z-index: 2 !important;
 }
 
-
 .bg-breadcrumb::before {
     content: "";
     position: absolute;
@@ -453,14 +499,6 @@
     background: transparent;
     z-index: 2 !important;
 }
-
-@keyframes RotateMoveCircle {
-    0% {top: -200px;}
-    50%   {right: -100px;}
-    75%   {top: -100px;}
-    100%  {top: -200px;}
-}
-
 
 .bg-breadcrumb::after {
     content: "";
@@ -476,7 +514,6 @@
     z-index: 2 !important;
 }
 /*** Single Page Hero Header End ***/
-
 
 /*** About Start ***/
 .about .text {
@@ -721,7 +758,6 @@
 .blog .blog-item:hover .project-img img {
     transform: scale(1.3);
 }
-
 /*** Blog End ***/
 
 /*** Team Start ***/
@@ -925,7 +961,6 @@
     bottom: 20px;
     right: 20px;
 }
-
 /*** FAQ'S End ***/
 
 /*** Footer Start ***/
