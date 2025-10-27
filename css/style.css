@@ -285,12 +285,11 @@
     border-radius: 15px;
 }
 /*** Navbar End ***/
-
 /*** Carousel Header Start ***/
 .header-carousel .header-carousel-item {
     position: relative;
     overflow: hidden;
-    height: 700px;
+    min-height: 70vh; /* responsive height for desktop */
 }
 
 .header-carousel-item img {
@@ -302,27 +301,38 @@
 .header-carousel .carousel-caption {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    text-align: center;
+    left: 5%; /* left-aligned with padding from left edge */
+    transform: translateY(-50%);
+    width: 90%;
+    max-width: 700px;
+    text-align: left; /* left-align text */
     z-index: 9;
-    padding: 20px;
+    padding: 15px 0;
 }
 
 .header-carousel .carousel-caption h1 {
-    font-size: 3.5rem; /* hero title - large on desktop */
+    font-size: clamp(2rem, 4vw, 3.5rem); /* responsive font size */
     font-weight: 700;
     margin-bottom: 1rem;
-    line-height: 1.12;
+    line-height: 1.2;
+    color: #fff;
 }
 
 .header-carousel .carousel-caption p {
-    font-size: 1.15rem; /* paragraph under hero */
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
     margin-bottom: 1.5rem;
-    line-height: 1.5;
+    line-height: 1.4;
+    color: #f4f4f4;
 }
 
+.header-carousel .carousel-caption .btn {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    padding: 0.6rem 1.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Owl navigation buttons */
 .owl-prev, .owl-next {
     position: absolute;
     top: 50%;
@@ -344,13 +354,33 @@
 .owl-next { right: 30px; }
 .owl-prev:hover, .owl-next:hover { background: var(--bs-dark) !important; }
 
+/* Tablets */
 @media (max-width: 992px) {
-    .header-carousel .header-carousel-item { height: 500px; }
-    .header-carousel .carousel-caption h1 { font-size: 2.2rem; }
-    .header-carousel .carousel-caption p { font-size: 1rem; }
+    .header-carousel .header-carousel-item { min-height: 55vh; }
+    .carousel-caption { left: 5%; width: 90%; }
+    .header-carousel .carousel-caption h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    .header-carousel .carousel-caption p { font-size: clamp(0.9rem, 2.2vw, 1rem); }
+    .header-carousel .carousel-caption .btn { font-size: clamp(0.8rem, 2vw, 0.95rem); padding: 0.5rem 1.2rem; }
     .owl-prev, .owl-next { width: 50px; height: 50px; font-size: 1.2rem; }
     .owl-prev { left: 15px; }
     .owl-next { right: 15px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header-carousel .header-carousel-item { min-height: 60vh; }
+    .carousel-caption { left: 5%; width: 90%; padding: 10px 0; }
+    .header-carousel .carousel-caption h1 { font-size: clamp(1.5rem, 5vw, 2rem); }
+    .header-carousel .carousel-caption p { font-size: clamp(0.8rem, 3vw, 0.95rem); }
+    .header-carousel .carousel-caption .btn { font-size: clamp(0.75rem, 3vw, 0.9rem); padding: 0.45rem 1rem; }
+}
+
+/* Extra small phones */
+@media (max-width: 576px) {
+    .header-carousel .header-carousel-item { min-height: 55vh; }
+    .header-carousel .carousel-caption h1 { font-size: clamp(1.3rem, 5vw, 1.8rem); }
+    .header-carousel .carousel-caption p { font-size: clamp(0.75rem, 3.5vw, 0.9rem); }
+    .header-carousel .carousel-caption .btn { font-size: clamp(0.7rem, 3.5vw, 0.85rem); padding: 0.4rem 0.9rem; }
 }
 /*** Carousel End ***/
 
